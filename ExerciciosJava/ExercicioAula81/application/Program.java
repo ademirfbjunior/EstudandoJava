@@ -11,14 +11,13 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		AccountBank accountBank;
-		
+
 		System.out.print("Enter account number: ");
 		int accountNumber = sc.nextInt();
 
 		System.out.print("Enter account holder: ");
 		sc.nextLine();
 		String name = sc.nextLine();
-		
 
 		double firstDepositValue = 0.0;
 
@@ -31,12 +30,10 @@ public class Program {
 			firstDepositValue = sc.nextDouble();
 
 			accountBank = new AccountBank(accountNumber, name, firstDepositValue);
-		}
-		else {
-			
+		} else {
+
 			accountBank = new AccountBank(accountNumber, name);
 		}
-		
 
 		System.out.println("\nAccount Data: \n" + accountBank);
 
@@ -53,8 +50,6 @@ public class Program {
 		accountBank.withdraw(withdrawValue);
 
 		System.out.println("\nUpdate Account Data: \n" + accountBank);
-		
-		System.out.println("fazendo um test");
 
 		sc.close();
 	}
