@@ -10,6 +10,8 @@ public class Program {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		
+		// declarando o objeto antes de instancia
 		AccountBank accountBank;
 
 		System.out.print("Enter account number: ");
@@ -19,15 +21,13 @@ public class Program {
 		sc.nextLine();
 		String name = sc.nextLine();
 
-		double firstDepositValue = 0.0;
-
 		System.out.print("Is there an inicitial deposit (y/n) ? ");
 		String validateFirstDeposit = sc.nextLine();
 
 		if (validateFirstDeposit.equals("y")) {
 
 			System.out.print("Enter initial deposit value: ");
-			firstDepositValue = sc.nextDouble();
+			double firstDepositValue = sc.nextDouble();
 
 			accountBank = new AccountBank(accountNumber, name, firstDepositValue);
 		} else {

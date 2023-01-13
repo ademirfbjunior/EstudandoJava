@@ -49,12 +49,14 @@ public class AccountBank {
 
 	// criacao de metodos de funcionalidade
 
+	// metodo para realizar um deposito 
 	public void deposit(double depositValue) {
 
 		this.balance += depositValue;
 
 	}
 
+	// metodo para realizar um saque descontando o valor da taxa
 	public void withdraw(double withdrawValue) {
 
 		this.balance -= withdrawValue + TAXBALANCE;
