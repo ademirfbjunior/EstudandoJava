@@ -53,6 +53,8 @@ public class Program {
 		accountBank.withdraw(withdrawValue);
 
 		System.out.println("\nUpdate Account Data: \n" + accountBank);
+		
+		System.out.println("fazendo um test");
 
 		sc.close();
 	}
